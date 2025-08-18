@@ -8,6 +8,8 @@
   --highlight: #d72638;
   --bg-accent: #fdca40;
   --text-base: #131b23;
+  --nav-bar: #58a4b0;
+  --nav-text: #fafffd;
 }
 
 .darkmode {
@@ -15,14 +17,17 @@
   --bg-color: #131b23;
   --highlight: #d72638;
   --bg-accent: #fdca40;
-
+  --nav-bar: #58a4b0;
   --text-base: #131b23;
+  --nav-text: #fafffd;
 }
 body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #theme-switch {
@@ -30,11 +35,12 @@ body {
   width: 50px;
   padding: 0;
   border-radius: 50%;
-  background-color: var(--bg-accent);
+  background: none;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
+  cursor: pointer;
 }
 
 #theme-switch svg {
@@ -54,18 +60,25 @@ body {
 
 nav {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   justify-content: center;
   align-content: space-between;
-  color: var(--text-base);
-  background-color: var(--bg-accent);
-  border-radius: 100px;
+  color: var(--text-color);
   font-weight: bolder;
   position: fixed;
   width: 98%;
   top: 40px;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.navbar {
+  color: var(--text-base);
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  justify-content: center;
+  align-content: space-between;
+  background-color: var(--highlight);
 }
 nav ul {
   display: flex;
@@ -99,6 +112,7 @@ nav .logo {
   display: flex;
   justify-content: start;
   align-items: center;
+  z-index: 100;
 }
 .togglebtn {
   display: flex;
@@ -115,7 +129,7 @@ nav a:focus {
   outline: none;
 }
 nav a:hover {
-  color: var(--highlight);
+  color: var(--nav-text);
 }
 
 #home {
@@ -124,7 +138,16 @@ nav a:hover {
   justify-items: center;
   height: 100dvh;
 }
-
+#home svg {
+  position: absolute;
+  bottom: 0;
+  z-index: -10;
+}
+#svg1 {
+  position: absolute;
+  top: -25px;
+  z-index: -10;
+}
 #home h1 {
   font-weight: bolder;
   font-size: 5em;
@@ -140,7 +163,10 @@ nav a:hover {
 }
 
 #about {
-  height: 70dvb;
+  height: 40dvb;
   text-align: center;
-  background-color: #d72638;
+  background-color: var(--nav-bar);
+}
+#about h3 {
+  margin-top: 0;
 }
