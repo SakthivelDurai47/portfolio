@@ -1,234 +1,36 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "nata sans";
-}
-:root {
-  --text-color: #131b23;
-  --bg-color: #fafffd;
-  --highlight: #d72638;
-  --bg-accent: #fdca40;
-  --text-base: #131b23;
-  --nav-bar: #58a4b0;
-  --nav-text: #fafffd;
 }
 
-.darkmode {
-  --text-color: #fafffd;
-  --bg-color: #131b23;
-  --highlight: #d72638;
-  --bg-accent: #fdca40;
-  --nav-bar: #58a4b0;
-  --text-base: #131b23;
-  --nav-text: #fafffd;
+:root {
+  --bg-color: #040506;
+  --text-highlight: #d72638;
+  --font-color: #fafffd;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: var(--bg-color);
-  color: var(--text-color);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--font-color);
+  margin: 10px;
 }
 
-#theme-switch {
-  height: 50px;
-  width: 50px;
-  padding: 0;
-  border-radius: 50%;
-  background: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-}
-
-#theme-switch svg {
-  fill: var(--text-base);
-}
-
-#theme-switch svg:last-child {
-  display: none;
-}
-
-.darkmode #theme-switch svg:first-child {
-  display: none;
-}
-.darkmode #theme-switch svg:last-child {
-  display: block;
-}
-
+/* Nav Bar */
 nav {
+  border: 1px solid white;
   display: grid;
+  justify-items: center;
+  align-items: center;
   grid-template-columns: 1fr 2fr;
-  justify-content: center;
-  align-content: space-between;
-  color: var(--text-color);
-  font-weight: bolder;
-  position: fixed;
-  width: 98%;
-  top: 40px;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
-.navbar {
-  color: var(--text-base);
-  border-radius: 100px;
-  display: grid;
-  grid-template-columns: 5fr 1fr;
-  justify-content: center;
-  align-content: space-between;
-  background-color: var(--highlight);
-}
-nav ul {
+.logo-base {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  list-style-type: none;
 }
-nav ul li svg {
-  margin-right: 5px;
-  fill: var(--text-base);
-}
-nav ul li {
+.navbar ul li {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-right: 30px;
-}
-nav .logo-base {
-  padding: 3px 8px 0.7px 6px;
-  margin-right: 5px;
-}
-nav .logo-base svg {
-  background-color: var(--highlight);
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 3000px;
-}
-
-nav .logo {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  z-index: 100;
-}
-.togglebtn {
-  display: flex;
-  justify-content: end;
-}
-
-nav a:link,
-nav a:visited,
-nav a:hover,
-nav a:active,
-nav a:focus {
-  color: inherit;
-  text-decoration: none;
-  outline: none;
-}
-nav a:hover {
-  color: var(--nav-text);
-}
-
-#home {
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  height: 100dvh;
-}
-#home svg {
-  position: absolute;
-  bottom: 0;
-  z-index: -10;
-}
-#svg1 {
-  position: absolute;
-  top: -25px;
-  z-index: -10;
-}
-#home h1 {
-  font-weight: bolder;
-  font-size: 5em;
-  font-family: "tangerine";
-}
-#home p {
-  font-size: 1.4em;
-}
-.highlight {
-  color: var(--highlight);
-  font-family: "tangerine";
-  font-weight: bolder;
-}
-
-#about {
-  height: 40dvb;
-  text-align: center;
-  background-color: var(--nav-bar);
-}
-#about h3 {
-  margin-top: 0;
-  background-color: var(--highlight);
-  display: inline;
-  padding: 10px 20px 10px 20px;
-  color: var(--text-base);
-  border-radius: 50px;
-}
-
-#about p {
-  margin: 50px 80px 50px 80px;
-}
-
-#projects {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60dvb;
-  margin: 0;
-}
-#projects h3 {
-  margin-top: 0;
-  background-color: var(--highlight);
-  display: inline;
-  padding: 10px 20px 10px 20px;
-  color: var(--text-base);
-  border-radius: 50px;
-}
-
-.card {
-  position: relative;
-  width: 200px;
-  height: 320px;
-  text-align: justify;
-  background-color: var(--nav-bar);
-  padding: 20px;
-  transition: 0.5s;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.card-holder {
-  position: relative;
-  width: 100%;
-  height: 370px;
-  overflow: hidden;
-}
-
-#next,
-#prev {
-  position: absolute;
-  top: 40%;
-  background-color: transparent;
-  border: none;
-  font-size: xx-large;
-  font-weight: bold;
-  left: 50px;
-  color: var(--highlight);
-}
-
-#next {
-  left: unset;
-  right: 50px;
+  align-items: space-around;
 }
