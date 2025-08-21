@@ -17,6 +17,8 @@ body {
   font-family: "nata sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-size: clamp(16px, 1.2vw, 24px);
 }
 .tangerine-regular {
   font-family: "Tangerine", cursive;
@@ -107,7 +109,7 @@ nav a:hover {
 /* HERO SECTION */
 
 #hero {
-  height: 90dvh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,6 +135,45 @@ nav a:hover {
   position: absolute;
   box-shadow: 0 0 700px 15px #fafffd4c;
 }
-section {
-  height: 100vh;
+
+/* About Section */
+
+#about .text-box {
+  margin: 50px;
+  background-color: var(--text-highlight);
+  display: flex;
+  padding: 20px;
+  border-radius: 12px;
+}
+#about img {
+  border-radius: 8px;
+}
+#about .text-cnt {
+  padding: 30px;
+  color: var(--bg-color);
+}
+
+/* Projects */
+
+#projects .container {
+  display: flex;
+  justify-content: space-around;
+}
+.container .card {
+  background-color: var(--text-highlight);
+  width: 30%;
+  height: auto;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 10px;
+  color: #040506;
+  text-align: center;
+}
+
+/* Contacts */
+#contacts {
+  height: 40dvh;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
 }
