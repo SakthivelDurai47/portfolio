@@ -31,11 +31,11 @@
               <path
                 d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"
               /></svg></span
-          ><span class="logo-tilte">Sakthivel Durai</span>
+          ><span class="logo-title tangerine-bold">Sakthivel Durai</span>
         </div>
         <div class="navbar">
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contacts">Contacts</a></li>
@@ -43,14 +43,21 @@
         </div>
       </nav>
     </header>
-    <main>
-      <div id="home">
+    <main id="home" class="section">
+      <div id="hero">
         <img class="back-img" src="gradient.png" alt="" />
-
-        <h1>Hello, I'm<span class="highlight"> Sakthivel Durai</span></h1>
+        <div class="blur"></div>
+        <h1>
+          Hello, I'm<span class="highlight tangerine-bold">
+            Sakthivel Durai</span
+          >
+        </h1>
         <p>An engineer in progress: learning, building, and sharing tech.</p>
       </div>
     </main>
+    <section class="section" id="about"></section>
+    <section class="section" id="projects"></section>
+    <footer class="section" id="contacts"></footer>
 
     <script src="script.js"></script>
   </body>
