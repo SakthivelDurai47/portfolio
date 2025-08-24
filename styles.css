@@ -5,9 +5,10 @@
 }
 
 :root {
-  --bg-color: #040506;
+  --bg-color: #0a0c0e;
   --text-highlight: #58a4b0;
   --font-color: #fafffd;
+  --white-pale: #e2e1e1;
 }
 
 body {
@@ -47,6 +48,7 @@ nav {
   transform: translateX(-50%);
   z-index: 100;
   width: 95%;
+  background-color: var(--bg-color);
 }
 
 nav .logo {
@@ -87,10 +89,9 @@ nav .logo-base svg {
   justify-content: space-evenly;
   align-items: center;
   list-style-type: none;
-  font-weight: 600;
 }
 nav a {
-  color: var(--font-color);
+  color: var(--text-highlight);
   text-decoration: none;
   padding: 8px 15px 8px 15px;
 }
@@ -101,7 +102,7 @@ nav a:hover {
   /* box-shadow: 0 0 6px 1px #fafffd9e; */
   padding: 8px 15px 8px 15px;
   border-radius: 100px;
-  background-color: #fafffd;
+  background-color: var(--white-pale);
   color: var(--bg-color);
   transition: background-color 0.5s ease;
 }
@@ -126,7 +127,7 @@ nav a:hover {
   font-family: "tangerine";
   margin-bottom: 10px;
 }
-#hero .highlight {
+.highlight {
   color: var(--text-highlight);
 }
 .blur {
@@ -137,10 +138,12 @@ nav a:hover {
 }
 
 /* About Section */
-
+#about {
+  padding-top: 70px;
+}
 #about .text-box {
   margin: 50px;
-  background-color: var(--text-highlight);
+  background-color: var(--white-pale);
   display: flex;
   padding: 20px;
   border-radius: 12px;
@@ -152,28 +155,94 @@ nav a:hover {
   padding: 30px;
   color: var(--bg-color);
 }
-
+#about ul {
+  margin-left: 30px;
+}
 /* Projects */
-
+#projects {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
 #projects .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .container .card {
-  background-color: var(--text-highlight);
-  width: 30%;
+  background-color: var(--white-pale);
+  width: 50%;
   height: auto;
-  padding: 30px;
+  padding: 10px;
   border-radius: 8px;
   margin: 10px;
-  color: #040506;
+  color: var(--bg-color);
+}
+#projects .highlight {
+  margin-bottom: 40px;
+}
+.card h3 {
+  padding: 10px 0px 10px 0px;
   text-align: center;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 /* Contacts */
 #contacts {
-  height: 40dvh;
+  padding: 30px 10px 30px 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: end;
+  border-top: 1px solid white;
+}
+#contacts .links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.links p {
+  margin-left: 10px;
+}
+
+#contacts svg {
+  fill: var(--font-color);
+  width: 30px !important;
+  height: 30px !important;
+  margin: auto;
+}
+#contacts .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 12px 0px 12px;
+}
+
+#contacts a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+#contacts a:hover {
+  color: var(--text-highlight);
+}
+
+/* Resposive hell */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 0;
+    background: none;
+    height: 100dvh;
+  }
+  nav .navbar {
+    position: fixed;
+    bottom: 10%;
+    background-color: var(--bg-color);
+    padding: 15px 12px 15px 12px;
+    border-radius: 100px;
+  }
 }
